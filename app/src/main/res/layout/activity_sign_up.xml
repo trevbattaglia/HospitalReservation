@@ -1,0 +1,133 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="5dp"
+    android:stretchColumns="*" android:background="@android:color/white">
+
+
+    <!-- tableRow0 -->
+
+    <TableRow
+        android:id="@+id/tableRow0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name" />
+
+    </TableRow>
+    <TableRow android:id="@+id/tableRow2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:ems="10"
+            android:hint="@string/enterName"
+            android:imeOptions="actionNext"
+            android:inputType="text" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow4"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email" />
+
+    </TableRow>
+    <TableRow android:id="@+id/tableRow5"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <EditText
+            android:id="@+id/enterEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:ems="10"
+            android:hint="@string/loginEmail"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow6"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password" />
+    </TableRow>
+    <TableRow android:id="@+id/tableRow7"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <EditText android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_span="2"
+            android:inputType="textPassword" android:id="@+id/enterPassword"
+            android:hint="@string/loginPassword"
+            android:imeOptions="actionNext">
+        </EditText>
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow8"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirmPassword" />
+    </TableRow>
+    <TableRow android:id="@+id/tableRow9"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <EditText android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_span="2"
+            android:inputType="textPassword" android:id="@+id/confirmPassword"
+            android:hint="@string/confirmPassword"
+            android:imeOptions="actionNext">
+        </EditText>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/signUpButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="returnAction"
+            android:text="@string/signUpButton"
+            android:width="200dp" >
+        </Button>
+    </TableRow>
+
+</TableLayout>
+
+

@@ -1,0 +1,83 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="5dp"
+    android:stretchColumns="*" android:background="@android:color/white">
+
+
+    <!-- tableRow0 -->
+    <TableRow android:id="@+id/tableRow0"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email" />
+    </TableRow>
+    <TableRow android:id="@+id/tableRow2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <EditText android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_span="2"
+            android:inputType="text" android:id="@+id/enterEmail"
+            android:hint="@string/loginEmail"
+            android:imeOptions="actionNext">
+        </EditText>
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow3"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password" />
+    </TableRow>
+    <TableRow android:id="@+id/tableRow4"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <EditText android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_span="2"
+            android:inputType="text" android:id="@+id/enterPassword"
+            android:hint="@string/loginPassword"
+            android:imeOptions="actionNext">
+        </EditText>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+    </TableRow>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="loginAction"
+        android:text="@string/loginButton" />
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="signUpAction"
+        android:text="@string/signUpButton" />
+
+    <TableRow android:id="@+id/tableRow10"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+    </TableRow>
+
+
+
+</TableLayout>
