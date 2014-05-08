@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class SignUp extends ActionBarActivity {
@@ -14,6 +16,7 @@ public class SignUp extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        setTitle("Monte's Restaurant");
     }
 
 
@@ -24,11 +27,57 @@ public class SignUp extends ActionBarActivity {
         return true;
     }
 
-    public void signUpAction(View v)
+    public void returnAction(View v)
     {
         try{
-            Intent k = new Intent(SignUp.this, Reservation.class);//make this go to where it is suppose to
-            startActivity(k);
+            String email = ((EditText)findViewById(R.id.enterEmail1)).getText().toString();
+
+            String test = "test";
+
+            int flag=0;
+            String validdomain="com";
+            String validdomain1="gov";
+            String validdomain2="edu";
+            for(int i=0; i<email.length(); i++)
+            {
+                //checks each char to see if it is an int
+                char x = email.charAt(i);
+
+                if(Character.isDigit(x)==true)
+                {
+                    System.out.println("Email is invalid.");
+                    flag=1;
+                    break;
+                }
+                if(x=='.')
+                {
+
+                    //check to see if chars after '.' are longer than 3
+
+                        if(email.substring(i+1, i+4).equals(validdomain) || email.substring(i+1, i+4).equals(validdomain1) || email.substring(i+1, i+4).equals(validdomain2))
+                        {
+                            Intent k = new Intent(SignUp.this,
+                                Reserve.class);
+                            Toast.makeText(getApplicationContext(),
+                                    "Email is valid", Toast.LENGTH_LONG).show();
+                            startActivity(k);
+
+                        }
+
+                    //check if next three are .com .gov .edu
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(),
+                            "Email is Invalid", Toast.LENGTH_LONG).show();
+
+                    }
+                }
+
+            }
+            Toast.makeText(getApplicationContext(),
+                    "Email is invalid", Toast.LENGTH_LONG).show();
+
+
         }catch(Exception e){
         }
     }

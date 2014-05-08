@@ -8,12 +8,24 @@
     <TableRow android:id="@+id/tableRow0"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="200dp"
+            android:layout_height="170dp"
 
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_alignRight="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="23dp"
+            android:src="@drawable/monte"
+            android:layout_span="2" />
     </TableRow>
 
     <TableRow android:id="@+id/tableRow1"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,12 +50,14 @@
             android:layout_height="wrap_content"
             android:text="@string/password" />
     </TableRow>
-    <TableRow android:id="@+id/tableRow4"
+    <TableRow android:id="@+id/password"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
-        <EditText android:layout_width="match_parent"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_span="2"
-            android:inputType="text" android:id="@+id/enterPassword"
+            android:inputType="text"
+            android:id="@+id/enterPassword"
             android:hint="@string/loginPassword"
             android:imeOptions="actionNext">
         </EditText>

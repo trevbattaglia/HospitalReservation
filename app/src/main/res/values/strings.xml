@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">HospitalReservation</string>
+    <string name="app_name">ResturantReservation</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="email">Email: </string>
@@ -12,10 +12,11 @@
     <string name="signUpButton">Sign Up</string>
     <string name="title_activity_reservation">Reservation</string>
     <string name="title_activity_sign_up">SignUp</string>
-
     <string name="name">First Name:</string>
     <string name="enterName">Enter Name:</string>
-
     <string name="confirmPassword">Confirm Password:</string>
+    <string name="title_activity_reserve">Reserve</string>
+    <string name="title_activity_main_activity2">Montes Resturant</string>
+    <string name="title_activity_receipt">receipt</string>
 
 </resources>

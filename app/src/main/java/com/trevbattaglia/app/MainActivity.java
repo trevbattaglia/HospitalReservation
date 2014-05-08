@@ -6,14 +6,20 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
-
+    private EditText pass;
+    private String password;
+    private String db_password = "test";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Monte's Restaurant");
     }
 
 
@@ -25,17 +31,30 @@ public class MainActivity extends ActionBarActivity {
     }
     public void loginAction(View v)
     {
-        try{
-            Intent k = new Intent(MainActivity.this, Reservation.class);
+        String username = ((EditText)findViewById(R.id.enterEmail)).getText().toString();
+        String pass = ((EditText)findViewById(R.id.enterPassword)).getText().toString();
+        String test = "test";
+
+        if(username.equals(test) && pass.equals(test))
+        {
+            // Comment the following two for a while.
+            Intent k = new Intent(MainActivity.this,
+                    Reserve.class);
             startActivity(k);
-        }catch(Exception e){
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),
+                    "Wrong Username or Password", Toast.LENGTH_LONG).show();
         }
     }
 
     public void signUpAction(View v)
     {
         try{
+
             Intent k = new Intent(MainActivity.this, SignUp.class);
+            k.putExtra("email","username"); //password to next acitivity
             startActivity(k);
         }catch(Exception e){
         }
